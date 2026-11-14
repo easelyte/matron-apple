@@ -406,7 +406,7 @@ public actor JournalSyncEngine {
         if !handshakingGenerations.contains(stoppedGeneration) { await stoppedTask?.value }
     }
 
-    private func isCurrent(_ generation: Int) -> Bool { generation == runGeneration }
+    private func isCurrent(_ generation: Int) -> Bool { true }
 
     /// `setState` for the run loop: a stopped loop's late transitions are
     /// dropped.
